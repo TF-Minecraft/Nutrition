@@ -1,0 +1,3 @@
+nutrition.admin:
+       description: Admin Perms for nutrition plugin.
+       default: false

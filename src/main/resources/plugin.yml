@@ -1,0 +1,12 @@
+main: net.tfminecraft.nutrition.Nutrition
+api-version: 1.20
+name: Nutrition
+version: 1.0
+author: Drefvelin
+
+softdepend: [MMOItems, MythicLib]
+
+commands:
+  nutrition:
+    description: View your current nutrition and diet variety
+    usage: /nutrition
