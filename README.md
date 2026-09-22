@@ -1,22 +1,22 @@
-# nutrition
+# Nutrition
 
-Technical documentation is maintained in [TF-Minecraft/Docs](https://github.com/TF-Minecraft/Docs/blob/main/projects/Nutrition/README.md).
+> Diet history and food variety for TF-Minecraft characters.
 
-Use that project index for setup, configuration, architecture, integration and testing guides. This repository contains the source and project-specific assets.
+Nutrition is a standalone diet plugin that evaluates what a player has eaten over time. It combines the nutritional value of food groups with variety across recent meals, then maps the result to a diet level and associated character effects.
 
-## TLibs build dependency
+> **Archived repository:** this README describes the preserved plugin logic. The bundled example data is incomplete and does not represent a ready-to-play food catalogue.
 
-TLibs is a versioned Maven `provided` dependency. From this repository, prepare
-it once with the shared installer, then build as usual:
+## Features
 
-```sh
-python3 ../tlibs/tools/install-dependency.py --pom pom.xml
-mvn clean verify
-```
+- **Recent meal history** — tracks a rolling selection of consumed foods instead of judging a diet from a single meal.
+- **Food groups** — recognises supported vanilla foods and custom MMOItems foods through their assigned groups.
+- **Variety scoring** — repeated meals and a more balanced spread of different foods produce different diversity multipliers.
+- **Diet levels** — combines food-group values and diversity to determine the player's current nutrition level.
+- **Visible feedback** — displays nutrition and diversity bars, with a notification when the diet level changes.
+- **Character effects** — diet levels can apply MMOCore attribute values, and meal history is saved between sessions.
 
-See [TLibs dependency setup](https://github.com/TF-Minecraft/TLibs/blob/v1.1.0/DEPENDENCIES.md)
-for public release installation, offline builds and rollback.
-Other declared build dependencies still need their usual preparation.
-Use JDK 25 for this TLibs binary; the server must also run Java 25.
+## Documentation
 
-Builds and server runtime require Java 25 and [TLibs 1.1.0](https://github.com/TF-Minecraft/TLibs/releases/tag/v1.1.0).
+[Project documentation](https://github.com/TF-Minecraft/Docs/blob/main/projects/Nutrition/README.md)
+
+Technical documentation is maintained in [TF-Minecraft/Docs](https://github.com/TF-Minecraft/Docs).
