@@ -8,7 +8,7 @@ import java.util.Map;
 
 import org.bukkit.entity.Player;
 
-import me.Plugins.TLibs.Objects.API.SubAPI.StringFormatter;
+import net.tfminecraft.tlibs.objects.api.subapi.StringFormatter;
 import net.Indyuce.mmocore.api.player.attribute.PlayerAttributes.AttributeInstance;
 import net.tfminecraft.nutrition.Cache;
 import net.tfminecraft.nutrition.Database;
